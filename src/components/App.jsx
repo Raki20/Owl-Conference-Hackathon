@@ -1,4 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import Home from "./Home";
+import Speakers from "./Speakers";
+import Schedule from "./Schedule";
+import Info from "./Info";
+import Jobs from "./Jobs";
 
 class App extends Component {
     constructor(props) {
@@ -29,12 +34,11 @@ class App extends Component {
         console.log("state", this.state);
         return (
             <div>
-                <h1>
-                    Hello from
-                    <span>
-                        { ` ${process.env.HOME_URL}`}
-                    </span>
-                </h1>
+                <Home />
+                <Speakers />
+                <Schedule />
+                <Info />
+                <Jobs />
             </div>
         );
     }
