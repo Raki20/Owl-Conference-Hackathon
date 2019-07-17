@@ -20,6 +20,7 @@ class App extends Component {
             about: {},
             isModalOpen: false,
             currentSpeaker: {},
+            isLoading: true
         };
     }
 
@@ -32,7 +33,7 @@ class App extends Component {
         fetch("https://api.jsonbin.io/b/5d2f4c5450ba093dda160d01/3")
             .then(response => response.json())
             .then(data => (
-                this.setState(data)
+                this.setState({ ...data, isLoading: false })
             ));
     }
 
@@ -44,6 +45,7 @@ class App extends Component {
     })
 
     render() {
+<<<<<<< HEAD
         const {
             jobs,
             location,
@@ -54,12 +56,23 @@ class App extends Component {
             currentSpeaker
         } = this.state;
 
+=======
+        const { jobs, location, speakers, timetable, about, isLoading } = this.state;
+        if (isLoading) {
+            return <p>isLoading.....</p>;
+        }
+>>>>>>> master
         return (
             <div>
                 <Navbar />
                 <Home />
+<<<<<<< HEAD
                 <Speakers speakers={speakers} onClickCard={this.handleClickSpeaker} />
                 <Schedule />
+=======
+                <Speakers />
+                <Schedule timetable={timetable} />
+>>>>>>> master
                 <Info />
                 <Jobs />
                 <SpeakerModal isOpen={isModalOpen} speaker={currentSpeaker} onClose={this.handleCloseModal} />
