@@ -5,6 +5,9 @@ import Speakers from "./Speakers";
 import Schedule from "./Schedule";
 import Info from "./Info";
 import Jobs from "./Jobs";
+import SpeakerModal from "./SpeakerModal";
+
+// import apiStuff from '../../mercedesapi.json';
 
 class App extends Component {
     constructor(props) {
@@ -13,33 +16,53 @@ class App extends Component {
             jobs: {},
             location: {},
             speakers: [],
-            timetable: {},
-            about: {}
+            timetable: [],
+            about: {},
+            isModalOpen: false,
+            currentSpeaker: {},
         };
     }
 
     componentDidMount () {
         this.getConferenceInfo();
+        // this.setState(apiStuff);
     }
 
     getConferenceInfo = () => {
-        fetch("https://api.jsonbin.io/b/5d1cc16ff467d60d75acb5bd/1")
+        fetch("https://api.jsonbin.io/b/5d2f4c5450ba093dda160d01/3")
             .then(response => response.json())
             .then(data => (
                 this.setState(data)
             ));
     }
 
+    handleCloseModal = () => this.setState({ isModalOpen: false })
+
+    handleClickSpeaker = speaker => this.setState({ 
+        isModalOpen: true,
+        currentSpeaker: speaker
+    })
+
     render() {
-        const { jobs, location, speakers, timetable, about } = this.state;
+        const {
+            jobs,
+            location,
+            speakers,
+            timetable,
+            about,
+            isModalOpen,
+            currentSpeaker
+        } = this.state;
+
         return (
             <div>
                 <Navbar />
                 <Home />
-                <Speakers speakers={speakers} />
+                <Speakers speakers={speakers} onClickCard={this.handleClickSpeaker} />
                 <Schedule />
                 <Info />
                 <Jobs />
+                <SpeakerModal isOpen={isModalOpen} speaker={currentSpeaker} onClose={this.handleCloseModal} />
             </div>
         );
     }

@@ -1,11 +1,6 @@
-@import url('navbar.scss');
+@import './navbar.scss';
+@import './speakers.scss';
 
 body {
   font-family: Helvetica;
-}
-
-#root {
-  height: 100vh;
-  display: flex;
-  align-items: center;
 }

@@ -1,14 +1,17 @@
-import React from 'react';
+import React from "react";
+import SpeakerCard from "./SpeakerCard";
 
-const Speakers = (speakers) => {
+const Speakers = ({ speakers, onClickCard }) => {
     return (
-        <section id="speakers">
-            <h2>Meet ours amazing speakers...</h2>
-
-            {speakers.map((speaker) => {
-                <SpeakerCard speaker={speaker} />
-            })
-            }
+        <section id="speakers" className="speakers-section">
+            <h2>Meet our amazing speakers...</h2>
+            <div className="speakers-list">
+                {
+                    speakers.map(speaker => (
+                        <SpeakerCard speaker={speaker} key={speaker.name} onClick={onClickCard} />
+                    ))
+                }
+            </div>
         </section>
     );
 };
