@@ -10,15 +10,36 @@
     }
 }
 
-.speaker-card {
-    display: flex;
-    flex-direction: column;
-    width: 25vw;
-    margin: 15px;
-    padding: 5px;
-    img {
-        width: 100%;
+.speaker{
+    &-card {
+        display: flex;
+        flex-direction: column;
+        width: 25vw;
+        margin: 15px;
+        padding: 5px;
+        img {
+            width: 100%;
+        }
     }
+    &-modal{
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        p {
+            text-align: right;
+        }
+
+        &-text{
+            flex-direction: column;
+        }
+        &-picture{
+            img{
+                width:50vw;
+            }
+
+        }
+    }
+    
 }
 
 
