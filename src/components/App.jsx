@@ -1,10 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import Navbar from "./Navbar";
 import Home from "./Home";
 import Speakers from "./Speakers";
 import Schedule from "./Schedule";
 import Info from "./Info";
 import Jobs from "./Jobs";
+import apiStuff from "../../mercedesapi.json";
 
 class App extends Component {
     constructor(props) {
@@ -21,10 +22,11 @@ class App extends Component {
 
     componentDidMount () {
         this.getConferenceInfo();
+        // this.setState(apiStuff);
     }
 
     getConferenceInfo = () => {
-        fetch("https://api.jsonbin.io/b/5d1cc16ff467d60d75acb5bd/1")
+        fetch("https://api.jsonbin.io/b/5d2f4c5450ba093dda160d01/3")
             .then(response => response.json())
             .then(data => (
                 this.setState({ ...data, isLoading: false })
@@ -37,14 +39,14 @@ class App extends Component {
             return <p>isLoading.....</p>;
         }
         return (
-            <div>
+            <Fragment>
                 <Navbar />
                 <Home />
                 <Speakers />
                 <Schedule timetable={timetable} />
                 <Info />
                 <Jobs />
-            </div>
+            </Fragment>
         );
     }
 }

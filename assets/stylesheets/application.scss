@@ -1,10 +1,6 @@
-@import url('navbar.scss');
+@import 'navbar.scss';
+@import 'schedule.scss';
 
 body {
   font-family: Helvetica;
-}
-
-#root {
-  display: flex;
-  align-items: center;
 }
