@@ -31,7 +31,6 @@ class App extends Component {
 
     render() {
         const { jobs, location, speakers, timetable, about } = this.state;
-        console.log("state", this.state);
         return (
             <div>
                 <Home />
