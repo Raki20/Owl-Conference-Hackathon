@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Navbar from "./Navbar";
 import Home from "./Home";
 import Speakers from "./Speakers";
 import Schedule from "./Schedule";
@@ -33,6 +34,7 @@ class App extends Component {
         const { jobs, location, speakers, timetable, about } = this.state;
         return (
             <div>
+                <Navbar />
                 <Home />
                 <Speakers />
                 <Schedule />
