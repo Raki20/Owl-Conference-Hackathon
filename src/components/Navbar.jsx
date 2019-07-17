@@ -1,5 +1,5 @@
-import React from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
+import React from "react";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Navbar = () => {
     return (
