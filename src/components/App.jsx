@@ -62,7 +62,7 @@ class App extends Component {
         return (
             <Fragment>
                 <Navbar />
-                <Home />
+                <Home about={about} />
                 <Speakers speakers={speakers} onClickCard={this.handleClickSpeaker} />
                 <Schedule timetable={timetable} />
                 <Info />
