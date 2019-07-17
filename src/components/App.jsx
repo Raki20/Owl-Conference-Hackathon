@@ -5,7 +5,9 @@ import Speakers from "./Speakers";
 import Schedule from "./Schedule";
 import Info from "./Info";
 import Jobs from "./Jobs";
-import apiStuff from "../../mercedesapi.json";
+import SpeakerModal from "./SpeakerModal";
+
+// import apiStuff from '../../mercedesapi.json';
 
 class App extends Component {
     constructor(props) {
@@ -16,6 +18,8 @@ class App extends Component {
             speakers: [],
             timetable: [],
             about: {},
+            isModalOpen: false,
+            currentSpeaker: {},
             isLoading: true
         };
     }
@@ -33,8 +37,25 @@ class App extends Component {
             ));
     }
 
+    handleCloseModal = () => this.setState({ isModalOpen: false })
+
+    handleClickSpeaker = speaker => this.setState({ 
+        isModalOpen: true,
+        currentSpeaker: speaker
+    })
+
     render() {
-        const { jobs, location, speakers, timetable, about, isLoading } = this.state;
+        const {
+            jobs,
+            location,
+            speakers,
+            timetable,
+            about,
+            isModalOpen,
+            currentSpeaker,
+            isLoading
+        } = this.state;
+
         if (isLoading) {
             return <p>isLoading.....</p>;
         }
@@ -42,10 +63,15 @@ class App extends Component {
             <Fragment>
                 <Navbar />
                 <Home />
-                <Speakers />
+                <Speakers speakers={speakers} onClickCard={this.handleClickSpeaker} />
                 <Schedule timetable={timetable} />
                 <Info />
                 <Jobs />
+                <SpeakerModal
+                    isOpen={isModalOpen}
+                    speaker={currentSpeaker}
+                    onClose={this.handleCloseModal}
+                />
             </Fragment>
         );
     }
