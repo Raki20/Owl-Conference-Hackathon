@@ -6,7 +6,8 @@ const Talk = ({ talk }) => {
             <p>
                 {talk.starttime} | {talk.endtime}
             </p>
-            
+            <p>{talk.topic}</p>
+            <p>{talk.venue}</p>
         </div>
     );
 };
