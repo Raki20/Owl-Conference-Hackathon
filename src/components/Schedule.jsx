@@ -4,9 +4,10 @@ import ScheduleDay from "./ScheduleDay";
 
 class Schedule extends Component {
     constructor(props) {
+        const { timetable } = props;
         super(props);
         this.state = {
-            selectedDay: "12.10.2019"
+            selectedDay: timetable[0].date
         };
     }
 
