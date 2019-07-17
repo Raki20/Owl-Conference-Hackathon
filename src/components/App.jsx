@@ -12,8 +12,8 @@ class App extends Component {
         this.state = {
             jobs: {},
             location: {},
-            speakers: {},
-            timetable: {},
+            speakers: [],
+            timetable: [],
             about: {}
         };
     }
@@ -37,7 +37,7 @@ class App extends Component {
                 <Navbar />
                 <Home />
                 <Speakers />
-                <Schedule />
+                <Schedule schedule={timetable} />
                 <Info />
                 <Jobs />
             </div>

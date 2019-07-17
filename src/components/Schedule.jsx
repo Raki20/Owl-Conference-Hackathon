@@ -1,9 +1,14 @@
 import React from 'react';
+import ScheduleTab from "./ScheduleTab";
 
-const Schedule = () => {
+const Schedule = ({ schedule }) => {
     return (
-        <section id="schedule">
+        <section id="speakers">
             <h2>Schedule</h2>
+            {schedule.map(day => (
+                <ScheduleTab dayTitle={day.date} />
+            ))
+            }
         </section>
     );
 };
