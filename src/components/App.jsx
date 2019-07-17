@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import Navbar from "./Navbar";
 import Home from "./Home";
 import Speakers from "./Speakers";
@@ -45,7 +45,6 @@ class App extends Component {
     })
 
     render() {
-<<<<<<< HEAD
         const {
             jobs,
             location,
@@ -53,30 +52,27 @@ class App extends Component {
             timetable,
             about,
             isModalOpen,
-            currentSpeaker
+            currentSpeaker,
+            isLoading
         } = this.state;
 
-=======
-        const { jobs, location, speakers, timetable, about, isLoading } = this.state;
         if (isLoading) {
             return <p>isLoading.....</p>;
         }
->>>>>>> master
         return (
-            <div>
+            <Fragment>
                 <Navbar />
                 <Home />
-<<<<<<< HEAD
                 <Speakers speakers={speakers} onClickCard={this.handleClickSpeaker} />
-                <Schedule />
-=======
-                <Speakers />
                 <Schedule timetable={timetable} />
->>>>>>> master
                 <Info />
                 <Jobs />
-                <SpeakerModal isOpen={isModalOpen} speaker={currentSpeaker} onClose={this.handleCloseModal} />
-            </div>
+                <SpeakerModal
+                    isOpen={isModalOpen}
+                    speaker={currentSpeaker}
+                    onClose={this.handleCloseModal}
+                />
+            </Fragment>
         );
     }
 }

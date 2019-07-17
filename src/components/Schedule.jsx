@@ -4,9 +4,10 @@ import ScheduleDay from "./ScheduleDay";
 
 class Schedule extends Component {
     constructor(props) {
+        const { timetable } = props;
         super(props);
         this.state = {
-            selectedDay: "12.10.2019"
+            selectedDay: timetable[0].date
         };
     }
 
@@ -24,19 +25,22 @@ class Schedule extends Component {
     render() {
         const { timetable } = this.props;
         return (
-            <section id="speakers">
-                <h2>Schedule</h2>
-                {
-                    timetable.map(day => (
-                        <ScheduleTab
-                            dayTitle={day.date}
-                            dayName={day.name}
-                            key={day.date}
-                            handleSelectTab={this.markAsSelectTab}
-                        />
-                    ))
-                }
-                <ScheduleDay dayTimeslot={this.getFilteredTimeslot()} />
+            <section id="schedule" className="schedule">
+                <div className="schedule-days-list">
+                    {
+                        timetable.map(day => (
+                            <ScheduleTab
+                                dayTitle={day.date}
+                                dayName={day.name}
+                                key={day.date}
+                                handleSelectTab={this.markAsSelectTab}
+                            />
+                        ))
+                    }
+                </div>
+                <div className="schedule-details">
+                    <ScheduleDay dayTimeslot={this.getFilteredTimeslot()} />
+                </div>
             </section>
         );
     }

@@ -1,0 +1,46 @@
+.schedule {
+    display: flex;
+}
+    
+.schedule-days-list {
+    width: 40vw;
+}
+
+.schedule-details {
+    display: flex;
+    width: 60vw;
+    flex-direction: column;
+    padding: 0 20px;
+    &-talk {
+        display: flex;
+        justify-content: space-between;
+        .talk-hours {
+            width: 40vw;
+            align-self: center;
+        }
+        .talk-description {
+            width: 60vw;
+            text-align: end;
+            padding-right: 10px;
+        }
+    }
+    
+    
+}
+
+
+.day-title {
+    background-color: #00ADEF;
+}
+
+@media (max-width: 780px) {
+    .schedule {
+        flex-direction: column;
+        .schedule-days-list {
+            width: 100vw;
+        }
+        .schedule-details {
+            width: 100vw;
+        }
+    }
+}

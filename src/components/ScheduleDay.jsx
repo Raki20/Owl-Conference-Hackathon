@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Talk from "./Talk";
 
 const ScheduleDay = ({ dayTimeslot }) => {
     return (
-        <div>
+        <Fragment>
             {
                 dayTimeslot.map(talk => (
                     <Talk talk={talk} key={talk.starttime} />
                 ))
             }
-        </div>
+        </Fragment>
     );
 };
 
