@@ -6,7 +6,7 @@ const ScheduleDay = ({ dayTimeslot }) => {
         <div>
             {
                 dayTimeslot.map(talk => (
-                    <Talk talk={talk} />
+                    <Talk talk={talk} key={talk.starttime} />
                 ))
             }
         </div>
