@@ -14,7 +14,8 @@ class App extends Component {
             location: {},
             speakers: [],
             timetable: [],
-            about: {}
+            about: {},
+            isLoading: true
         };
     }
 
@@ -26,18 +27,21 @@ class App extends Component {
         fetch("https://api.jsonbin.io/b/5d1cc16ff467d60d75acb5bd/1")
             .then(response => response.json())
             .then(data => (
-                this.setState(data)
+                this.setState({ ...data, isLoading: false })
             ));
     }
 
     render() {
-        const { jobs, location, speakers, timetable, about } = this.state;
+        const { jobs, location, speakers, timetable, about, isLoading } = this.state;
+        if (isLoading) {
+            return <p>isLoading.....</p>;
+        }
         return (
             <div>
                 <Navbar />
                 <Home />
                 <Speakers />
-                <Schedule schedule={timetable} />
+                <Schedule timetable={timetable} />
                 <Info />
                 <Jobs />
             </div>

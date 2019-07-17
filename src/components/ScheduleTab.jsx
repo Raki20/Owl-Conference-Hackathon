@@ -1,8 +1,9 @@
 import React from 'react';
 
-const ScheduleTab = ({ dayTitle }) => {
+const ScheduleTab = ({ dayTitle, dayName, handleSelectTab }) => {
+    const clickSelectDay = () => handleSelectTab(dayTitle);
     return (
-        <div>
+        <div role="presentation" onClick={clickSelectDay}>
             <h2>{dayTitle}</h2>
         </div>
     );
