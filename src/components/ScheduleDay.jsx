@@ -1,9 +1,14 @@
 import React from 'react';
+import Talk from "./Talk";
 
 const ScheduleDay = ({ dayTimeslot }) => {
     return (
         <div>
-            <h2>Day schedule</h2>
+            {
+                dayTimeslot.map(talk => (
+                    <Talk talk={talk} />
+                ))
+            }
         </div>
     );
 };

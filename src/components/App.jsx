@@ -41,7 +41,7 @@ class App extends Component {
                 <Navbar />
                 <Home />
                 <Speakers />
-                <Schedule schedule={timetable} />
+                <Schedule timetable={timetable} />
                 <Info />
                 <Jobs />
             </div>
