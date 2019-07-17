@@ -12,7 +12,7 @@ class App extends Component {
         this.state = {
             jobs: {},
             location: {},
-            speakers: {},
+            speakers: [],
             timetable: {},
             about: {}
         };
@@ -36,7 +36,7 @@ class App extends Component {
             <div>
                 <Navbar />
                 <Home />
-                <Speakers />
+                <Speakers speakers={speakers} />
                 <Schedule />
                 <Info />
                 <Jobs />
