@@ -8,12 +8,19 @@ const SpeakerModal = ({ isOpen, onClose, speaker }) => {
         <Modal
             isOpen={isOpen}
             onRequestClose={onClose}
-            // style={}
-            contentLabel="Example Modal"
+            style={}
+            contentLabel="Speaker Modal"
         >
-            <h2>Hello</h2>
-        </Modal>
+            <div>
+            <p>{speaker.name}</p>
+            <p> {speaker.role}</p>
+            <p> {speaker.about}</p>
+            </div>
 
+            <div>
+                <img src={speaker.image} />
+            </div>
+        </Modal>
     );
 };
 
