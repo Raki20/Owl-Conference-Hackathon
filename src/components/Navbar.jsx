@@ -21,7 +21,11 @@ class Navbar extends Component {
         if (screen === "laptop") {
             return (
                 <div className="navbar">
-                    <a href="https://www.mercedes-benz.io/" className="mercedes-io-logo">
+                    <a
+                        href="https://www.mercedes-benz.io/"
+                        target="_blanket"
+                        className="mercedes-io-logo"
+                    >
                         <img
                             src="https://res.cloudinary.com/dciypbwrh/image/upload/v1563439344/gradienty-io_qrgf6g.svg"
                             alt="mercedes-io-logo"
@@ -36,7 +40,11 @@ class Navbar extends Component {
         return (
             <div className={isOpen ? "burger" : "navbar"}>
                 <div className="burger-icons">
-                    <a href="https://www.mercedes-benz.io/" className="mercedes-io-logo">
+                    <a
+                        href="https://www.mercedes-benz.io/"
+                        target="_blanket"
+                        className="mercedes-io-logo"
+                    >
                         <img
                             src="https://res.cloudinary.com/dciypbwrh/image/upload/v1563439344/gradienty-io_qrgf6g.svg"
                             alt="mercedes-io-logo"
