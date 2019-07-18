@@ -11,25 +11,25 @@ const Footer = () => {
             <div className="footer-icons">
 
                 <div>
-                    <a href="https://www.instagram.com/mercedesbenz.io/">
+                    <a href="https://www.instagram.com/mercedesbenz.io/" target="_blank" rel="noopener noreferrer">
                         <img src="../../assets/icons/instagram-logo-white.png" alt="instagram icon" />
                     </a>
                 </div>
 
                 <div>
-                    <a href="https://www.facebook.com/mercedesbenziogmbh/">
+                    <a href="https://www.facebook.com/mercedesbenziogmbh/" target="_blank" rel="noopener noreferrer">
                         <img src="../../assets/icons/facebook.png" alt="facebook icon" />
                     </a>
                 </div>
 
                 <div>
-                    <a href="https://twitter.com/mercedesbenzio">
+                    <a href="https://twitter.com/mercedesbenzio" target="_blank" rel="noopener noreferrer">
                         <img src="../../assets/icons/twitter.png" alt="twitter icon" />
                     </a>
                 </div>
 
                 <div>
-                    <a href="https://github.com/mercedesbenzio">
+                    <a href="https://github.com/mercedesbenzio" target="_blank" rel="noopener noreferrer">
                         <img src="../../assets/icons/github.png" alt="github icon" />
                     </a>
                 </div>
