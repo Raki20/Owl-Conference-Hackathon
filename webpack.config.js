@@ -4,7 +4,6 @@ const path = require('path');
 const dotenv = require('dotenv');
 const fs = require('fs'); // to check if the file exists
 
-
 module.exports = (env) => {
     // handle .env:
     const currentPath = path.join(__dirname);
@@ -56,10 +55,14 @@ module.exports = (env) => {
                     test: /\.html$/,
                     loader: 'html-loader'
                 },
-            ]
+                {
+                    test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
+                    loader: 'file-loader',
+                },
+            ],
         },
         resolve: {
             extensions: [ '.js', '.jsx' ]
-        }
+        },
     };
 };

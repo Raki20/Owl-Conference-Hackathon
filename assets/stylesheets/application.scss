@@ -5,5 +5,10 @@
 @import './jobs.scss';
 
 body {
-  font-family: Helvetica;
+  font-family: "DaimlerCS";
+}
+
+@font-face{
+  font-family: "DaimlerCS";
+  src: local("DaimlerCS"), url("../fonts/DaimlerCS-Regular.woff2") format("woff2");
 }
