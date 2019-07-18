@@ -1,87 +1,62 @@
 import React, { Component } from "react";
-import AnchorLink from "react-anchor-link-smooth-scroll";
-
-const menuLinks = ["HOME", "SPEAKERS", "SCHEDULE", "INFO", "JOBS"];
+import NavbarItems from "./NavbarItems";
 
 class Navbar extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            active: "HOME"
+            isOpen: false
         };
     }
 
-    handleActive = (navSelected) => {
-        console.log(navSelected);
-        this.setState({ active: navSelected });
+    asMarkAsOpen = () => {
+        this.setState((state) => {
+            return { isOpen: !state.isOpen };
+        });
     }
 
     render() {
-        const { active } = this.state;
-        return (
-            <div className="navbar">
-                <a href="https://www.mercedes-benz.io/" className="mercedes-io-logo" target="_blank" rel="noopener noreferrer">
-                    <img
-                        src="https://res.cloudinary.com/dciypbwrh/image/upload/v1563439344/gradienty-io_qrgf6g.svg"
-                        alt="mercedes-io-logo"
-                    />
-                </a>
-                <div className="nav-link">
-                    {menuLinks.map(link => (
-                        <AnchorLink
-                            key={link}
-                            onClick={() => this.handleActive(link)}
-                            offset={() => 75}
-                            className={active === link ? "isActive" : ""}
-                            href={`#${link.toLowerCase()}`}
-                        >
-                            {link}
-                        </AnchorLink>
-                    ))}
-                    {/* <AnchorLink
-                        onClick={() => this.handleActive("Home")}
-                        offset={() => 75}
-                        className={active ? "isActive" : ""}
-                        href="#home"
-                    >
-                        HOME
-                    </AnchorLink>
-                    <AnchorLink
-                        onClick={() => this.handleActive("Speakers")}
-                        offset={() => 75}
-                        className={active ? "isActive" : ""}
-                        href="#speakers"
-                    >
-                        SPEAKERS
-                    </AnchorLink>
-                    <AnchorLink
-                        onClick={() => this.handleActive("Schedule")}
-                        offset={() => 75}
-                        className={active ? "isActive" : ""}
-                        href="#schedule"
-                    >
-                        SCHEDULE
-                    </AnchorLink>
-                    <AnchorLink
-                        onClick={() => this.handleActive("Info")}
-                        offset={() => 75}
-                        className={active ? "isActive" : ""}
-                        href="#info"
-                    >
-                        INFO
-                    </AnchorLink>
-                    <AnchorLink
-                        onClick={() => this.handleActive("Jobs")}
-                        offset={() => 75}
-                        className={active ? "isActive" : ""}
-                        href="#jobs"
-                    >
-                        JOBS
-                    </AnchorLink> */}
+        const { screen } = this.props;
+        const { isOpen } = this.state;
+        if (screen === "laptop") {
+            return (
+                <div className="navbar">
+                    <a href="https://www.mercedes-benz.io/" className="mercedes-io-logo">
+                        <img
+                            src="https://res.cloudinary.com/dciypbwrh/image/upload/v1563439344/gradienty-io_qrgf6g.svg"
+                            alt="mercedes-io-logo"
+                        />
+                    </a>
+                    <div className="nav-link">
+                        <NavbarItems />
+                    </div>
                 </div>
+            );
+        }
+        return (
+            <div className={isOpen ? "burger" : "navbar"}>
+                <div className="burger-icons">
+                    <a href="https://www.mercedes-benz.io/" className="mercedes-io-logo">
+                        <img
+                            src="https://res.cloudinary.com/dciypbwrh/image/upload/v1563439344/gradienty-io_qrgf6g.svg"
+                            alt="mercedes-io-logo"
+                        />
+                    </a>
+                    <div className="burger-icon" role="presentation" onClick={this.asMarkAsOpen}>
+                        <img
+                            src="../assets/icons/bars.png"
+                            alt="burger-icon"
+                        />
+                    </div>
+                </div>
+                {isOpen && (
+                    <div className="burger-links" role="presentation" onClick={this.asMarkAsOpen}>
+                        <NavbarItems />
+                    </div>
+                )}
             </div>
         );
     }
-};
+}
 
 export default Navbar;
