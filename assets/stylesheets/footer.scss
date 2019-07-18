@@ -12,8 +12,9 @@
         align-items: center;
         flex: 4;
         p {
-            margin-left: 20px;
             font-size: 20px;
+            margin: inherit;
+            padding-left: 20px;
         }
     }
     &-icons{
