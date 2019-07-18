@@ -7,12 +7,9 @@ import Info from "./Info";
 import Jobs from "./Jobs";
 import SpeakerModal from "./SpeakerModal";
 import Loading from "./Loading";
-<<<<<<< HEAD
-// import apiStuff from '../../mercedesapi.json';
-=======
 import Footer from "./Footer";
 import apiStuff from '../../mercedesapi.json';
->>>>>>> ffbb16f5753fe357e0108aaf3067d8a2555fcb67
+
 
 class App extends Component {
     constructor(props) {
@@ -30,12 +27,12 @@ class App extends Component {
     }
 
     componentDidMount () {
-        // setTimeout(() => {
-        //     this.setState({ ...apiStuff, isLoading: false });
-        // }, 1000);
         setTimeout(() => {
-            this.getConferenceInfo();
-        }, 1200);
+            this.setState({ ...apiStuff, isLoading: false });
+        }, 1000);
+        // setTimeout(() => {
+        //     this.getConferenceInfo();
+        // }, 1200);
         this.reportWindowSize();
         window.addEventListener('resize', this.reportWindowSize);
     }

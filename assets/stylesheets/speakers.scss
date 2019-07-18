@@ -2,6 +2,12 @@
     
     &-section{
     margin-top: 75px;
+    margin-left: 20px;
+    font-family: "DaimlerCS-Demi";
+
+        h2{
+            margin-left: 20px;
+        }
     }
 
     &-list{
@@ -41,36 +47,33 @@
             }
         }
     }
-    &-modal{
+    &-modal-text{
+        display: flex;
+        flex-direction: column;
+        img{
+            width: 15vw;
+            align-self: end;
+        }
+    }
+    &-modal-content{
+        display: flex;
+    }
+
+    &-modal-about{
         display: flex;
         align-items: center;
         padding: 20px;
         p {
             text-align: right;
         }
-        
-        &-list{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        
-        &-text{
-            display: flex;
-            flex-direction: column;
-            img{
-                width: 15vw;
-                align-self: end;
-            }
-        }
-        &-picture{
-            img{
-                width:50vw;
-            }
+    }
+
+    &-modal-picture{
+        img{
+            width:50vw;
         }
     }
 }
-
 
 @media (max-width: 700px){
     .speakers-list {
@@ -90,6 +93,16 @@
     }
     h2 {
         text-align: center;
+    }
+    .speaker-modal-content{
+        flex-direction: column;
+    }
+
+    .speaker-modal-text{
+        text-align: inherit;
+    }
+    .speaker-modal-about{
+        padding: 0px;
     }
 }
 
