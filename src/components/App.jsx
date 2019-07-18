@@ -26,7 +26,11 @@ class App extends Component {
 
     componentDidMount () {
         // this.getConferenceInfo();
+<<<<<<< HEAD
+        this.setState({...apiStuff, isLoading: false });
+=======
         this.setState({ ...apiStuff, isLoading: false });
+>>>>>>> master
     }
 
     getConferenceInfo = () => {

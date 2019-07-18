@@ -7,6 +7,7 @@
     &-list{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     }
 }
 
@@ -19,6 +20,19 @@
         padding: 5px;
         img {
             width: 100%;
+            margin-bottom: 10px;
+        }
+        &-text{
+            display: flex;
+            flex-direction: column;
+            img{
+                width: 143px;
+                background-color: #f1f1f1;
+            }
+            &-align{
+                display:flex;
+                justify-content: space-between;
+            }
         }
     }
     &-modal{
@@ -30,7 +44,12 @@
         }
 
         &-text{
+            display: flex;
             flex-direction: column;
+            img{
+                width: 15vw;
+                align-self: end;
+            }
         }
         &-picture{
             img{
@@ -51,6 +70,13 @@
     .speaker-card {
         width: 60vw;
         margin: 10px;
+        &-text-align{
+            display: flex;
+            flex-direction: column-reverse;
+                img{
+                    width: 25vw;
+                }
+        }
     }
     h2 {
         text-align: center;
