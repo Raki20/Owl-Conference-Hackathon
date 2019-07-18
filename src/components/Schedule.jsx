@@ -24,22 +24,27 @@ class Schedule extends Component {
 
     render() {
         const { timetable } = this.props;
+        const { selectedDay } = this.state;
         return (
             <section id="schedule" className="schedule">
+                <h2>Schedule</h2>
                 <div className="schedule-days-list">
-                    {
-                        timetable.map(day => (
-                            <ScheduleTab
-                                dayTitle={day.date}
-                                dayName={day.name}
-                                key={day.date}
-                                handleSelectTab={this.markAsSelectTab}
-                            />
-                        ))
-                    }
-                </div>
-                <div className="schedule-details">
-                    <ScheduleDay dayTimeslot={this.getFilteredTimeslot()} />
+                    <div className="days">
+                        {
+                            timetable.map(day => (
+                                <div className={selectedDay === day.date ? "day-title-selected" : "day-title" } key={day.date}>
+                                    <ScheduleTab
+                                        dayTitle={day.date}
+                                        dayName={day.name}
+                                        handleSelectTab={this.markAsSelectTab}
+                                    />
+                                </div>
+                            ))
+                        }
+                    </div>
+                    <div className="schedule-details">
+                        <ScheduleDay dayTimeslot={this.getFilteredTimeslot()} />
+                    </div>
                 </div>
             </section>
         );

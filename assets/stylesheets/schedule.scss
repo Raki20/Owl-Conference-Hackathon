@@ -1,9 +1,25 @@
 .schedule {
+    padding-top: 20px;
     display: flex;
+    flex-direction: column;
+    background-color: #000;
+    h2 {
+        color: #fff;
+        padding-left: 15px;
+    }
 }
     
 .schedule-days-list {
-    width: 40vw;
+    display: flex;
+}
+
+.days {
+    width: 40vw;  
+    display: flex;
+    flex-direction: column;
+    & > div {
+        transition: all 1s;
+    }
 }
 
 .schedule-details {
@@ -11,36 +27,73 @@
     width: 60vw;
     flex-direction: column;
     padding: 0 20px;
+    color: #fff;
     &-talk {
         display: flex;
         justify-content: space-between;
+        font-family: "DaimlerCS-Demi";
         .talk-hours {
             width: 40vw;
-            align-self: center;
+            text-align: center;
+
         }
         .talk-description {
             width: 60vw;
             text-align: end;
             padding-right: 10px;
+            padding-bottom: 20px;
+            hr {
+                border: 0.5px solid #fff;
+                margin: auto 0;
+            }
+            p {
+                margin-bottom: 2px;
+            }
+            &-room {
+                font-family: "DaimlerCS-Light";
+            }
         }
     }
-    
-    
 }
-
 
 .day-title {
     background-color: #00ADEF;
+    margin-top: 20px;
+    width: 150px;
+    padding: 10px;
+    h3 {
+        color: #fff;
+        align-self: flex-end;
+    }
+    &-selected {
+        background-color: #00ADEF;
+        margin-top: 20px;
+        width: 100%;
+        padding: 10px;
+        text-align: end;
+        h3 {
+            color: #fff;
+            align-self: flex-end;
+        }
+    }
 }
 
 @media (max-width: 780px) {
-    .schedule {
-        flex-direction: column;
-        .schedule-days-list {
-            width: 100vw;
+    h2 {
+        align-self: flex-start;
+    }
+    .schedule-days-list {
+        display: block;
+        .days {
+            width: 95%;
         }
-        .schedule-details {
-            width: 100vw;
-        }
+    }
+    .day-title, .day-title-selected {
+        padding: 7px;
+        margin-right: 10px;
+    }
+    .schedule-details {
+        padding-top: 20px;
+        width: 100vw;
     }
 }
