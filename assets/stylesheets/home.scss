@@ -18,16 +18,21 @@
 
 .details-banner {
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     height: 80vh;
     padding: 20px;
     align-items: center;
     background-image: url("https://res.cloudinary.com/dciypbwrh/image/upload/v1563439334/particles_zpulba.png");
-    &-left {
-        width: 50vw;
-    }
-    &-right {
+    &-top {
         width: 50vw;
         text-align: center;
+    }
+    &-bottom {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        width: 100%;
     }
 }
 
