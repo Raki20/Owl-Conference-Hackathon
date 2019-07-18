@@ -7,7 +7,6 @@ import Info from "./Info";
 import Jobs from "./Jobs";
 import SpeakerModal from "./SpeakerModal";
 import Loading from "./Loading";
-
 import apiStuff from '../../mercedesapi.json';
 
 class App extends Component {

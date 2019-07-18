@@ -5,7 +5,7 @@
 @import './jobs.scss';
 
 body {
-  font-family: Helvetica;
+  font-family: "DaimlerCS";
 }
 
 .loader {
@@ -13,4 +13,9 @@ body {
   display: flex;
   align-items: center;
   height: 100vh;
+}
+
+@font-face{
+  font-family: "DaimlerCS";
+  src: local("DaimlerCS"), url("../fonts/DaimlerCS-Regular.woff2") format("woff2");
 }
