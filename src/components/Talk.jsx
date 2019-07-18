@@ -7,9 +7,13 @@ const Talk = ({ talk }) => {
                 {talk.starttime} | {talk.endtime}
             </p>
             <div className="talk-description">
-                <p>{talk.topic}</p>
+                <p>
+                    {`${talk.topic.charAt(0).toUpperCase()}${talk.topic.slice(1)}`}
+                </p>
                 <hr />
-                <p className="talk-description-room">{talk.venue}</p>
+                <p className="talk-description-room">
+                    {`${talk.venue.charAt(0).toUpperCase()}${talk.venue.slice(1)}`}
+                </p>
             </div>
         </div>
     );
