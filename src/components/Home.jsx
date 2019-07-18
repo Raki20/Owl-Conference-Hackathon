@@ -7,13 +7,15 @@ const Home = ({ about }) => {
                 <img src="https://res.cloudinary.com/dciypbwrh/image/upload/v1563374771/owl-dark_rltqp4.png" alt="Owl Conference Logo" />
             </div>
             <div className="details-banner">
-                <div className="details-banner-left">
+                <div className="details-banner-top">
                     <p>Owl Conf 2019</p>
                     <p>{about.text.replace("Bring it owl. ", "")}</p>
                 </div>
-                <div className="details-banner-right">
+                <div className="details-banner-bottom">
                     <p>First Edition</p>
+                    <p><span role="img" aria-label="circle">⚫</span></p>
                     <p>Stuttgart</p>
+                    <p><span role="img" aria-label="circle">⚫</span></p>
                     <p>12 & 13 October</p>
                 </div>
             </div>
