@@ -25,4 +25,3 @@ const Info = () => {
 };
 
 export default Info;
-S
