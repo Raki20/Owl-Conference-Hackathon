@@ -7,12 +7,9 @@ import Info from "./Info";
 import Jobs from "./Jobs";
 import SpeakerModal from "./SpeakerModal";
 import Loading from "./Loading";
-<<<<<<< HEAD
-// import apiStuff from '../../mercedesapi.json';
-=======
 import Footer from "./Footer";
-import apiStuff from '../../mercedesapi.json';
->>>>>>> ffbb16f5753fe357e0108aaf3067d8a2555fcb67
+// import apiStuff from '../../mercedesapi.json';
+
 
 class App extends Component {
     constructor(props) {
