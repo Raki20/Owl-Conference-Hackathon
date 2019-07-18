@@ -4,11 +4,7 @@ const Home = ({ about }) => {
     return (
         <section id="home">
             <div className="banner">
-                <div className="banner-text">
-                    <h1>OWL CONFERENCE</h1>
-                    <h2>BRING IT OWL!</h2>
-                </div>
-                <h3>Powered by Mercedes-Benz.io</h3>
+                <img src="https://res.cloudinary.com/dciypbwrh/image/upload/v1563374771/owl-dark_rltqp4.png" alt="Owl Conference Logo" />
             </div>
             <div className="details-banner">
                 <img
