@@ -7,6 +7,7 @@ import Info from "./Info";
 import Jobs from "./Jobs";
 import SpeakerModal from "./SpeakerModal";
 import Loading from "./Loading";
+import Footer from "./Footer";
 import apiStuff from '../../mercedesapi.json';
 
 class App extends Component {
@@ -75,6 +76,7 @@ class App extends Component {
                 <Schedule timetable={timetable} />
                 <Info />
                 <Jobs jobs={jobs} />
+                <Footer />
                 <SpeakerModal
                     isOpen={isModalOpen}
                     speaker={currentSpeaker}

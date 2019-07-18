@@ -1,0 +1,28 @@
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #1f1f1f;
+    color: #fff;
+    height: 15vh;
+
+    &-text{
+        justify-content: flex-start;
+        display: flex;
+        align-items: center;
+        flex: 4;
+        p {
+            margin-left: 20px;
+            font-size: 20px;
+        }
+    }
+    &-icons{
+        display: flex;
+        align-self: center;
+        justify-content: space-evenly;
+        flex: 1;
+        img{
+            width: 30px;
+        }
+    }
+}
+    
