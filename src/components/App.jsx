@@ -6,6 +6,7 @@ import Schedule from "./Schedule";
 import Info from "./Info";
 import Jobs from "./Jobs";
 import SpeakerModal from "./SpeakerModal";
+import Loading from "./Loading";
 
 import apiStuff from '../../mercedesapi.json';
 
@@ -25,12 +26,10 @@ class App extends Component {
     }
 
     componentDidMount () {
+        setTimeout(() => {
+            this.setState({ ...apiStuff, isLoading: false });
+        }, 1000);
         // this.getConferenceInfo();
-<<<<<<< HEAD
-        this.setState({...apiStuff, isLoading: false });
-=======
-        this.setState({ ...apiStuff, isLoading: false });
->>>>>>> master
     }
 
     getConferenceInfo = () => {
@@ -61,7 +60,8 @@ class App extends Component {
         } = this.state;
 
         if (isLoading) {
-            return <p>isLoading.....</p>;
+            return <p>isLoading</p>;
+            // <Loading />;
         }
         return (
             <Fragment>

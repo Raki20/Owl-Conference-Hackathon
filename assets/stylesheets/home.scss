@@ -40,8 +40,9 @@
     align-items: center;
     img {
         width: 50vw;
+        height: 100%;
         color: #007bffba;
-        padding: 0 50px;
+        padding: 20px 50px;
     }
     p {
         width: 50vw;
@@ -53,8 +54,10 @@
     .details-banner {
         flex-direction: column;
         padding: 0;
+        justify-content: space-around;
         img {
             width: 40vw;
+            height: 50%;
             padding: 0 30px;
             align-self: start;
         }
