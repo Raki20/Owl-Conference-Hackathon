@@ -26,10 +26,12 @@ class App extends Component {
     }
 
     componentDidMount () {
+        // setTimeout(() => {
+        //     this.setState({ ...apiStuff, isLoading: false });
+        // }, 2000);
         setTimeout(() => {
-            this.setState({ ...apiStuff, isLoading: false });
-        }, 1000);
-        // this.getConferenceInfo();
+            this.getConferenceInfo();
+        }, 2000);
     }
 
     getConferenceInfo = () => {
@@ -60,8 +62,11 @@ class App extends Component {
         } = this.state;
 
         if (isLoading) {
-            return <p>isLoading</p>;
-            // <Loading />;
+            return (
+                <div className="loader">
+                    <Loading />
+                </div>
+            );
         }
         return (
             <Fragment>
