@@ -31,6 +31,8 @@ class App extends Component {
         // setTimeout(() => {
         //     this.getConferenceInfo();
         // }, 1200);
+        this.reportWindowSize();
+        window.addEventListener('resize', this.reportWindowSize);
     }
 
     getConferenceInfo = () => {
@@ -39,6 +41,14 @@ class App extends Component {
             .then(data => (
                 this.setState({ ...data, isLoading: false })
             ));
+    }
+
+    reportWindowSize = () => {
+        if (window.innerWidth < 780) {
+            this.setState({ screen: "mobile" });
+        } else {
+            this.setState({ screen: "laptop" });
+        }
     }
 
     handleCloseModal = () => this.setState({ isModalOpen: false })
@@ -57,7 +67,8 @@ class App extends Component {
             about,
             isModalOpen,
             currentSpeaker,
-            isLoading
+            isLoading,
+            screen
         } = this.state;
 
         if (isLoading) {
@@ -69,7 +80,7 @@ class App extends Component {
         }
         return (
             <Fragment>
-                <Navbar />
+                <Navbar screen={screen} />
                 <Home about={about} />
                 <Speakers speakers={speakers} onClickCard={this.handleClickSpeaker} />
                 <Schedule timetable={timetable} />

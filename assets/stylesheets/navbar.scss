@@ -6,14 +6,12 @@
     margin: 0;
     background-color:#1f1f1f;
     display: flex;
-    height: 75px;
-    img {
-        height: 60px;
-    }   
+    height: 75px; 
     a img{
         height: 40px;
     }
 }
+
 
 .nav-link {
     display: flex;
@@ -30,6 +28,57 @@
         color: #fff;
         border-bottom: 1px solid #fff;
     } 
+}
+
+.burger {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    margin: 0;
+    background-color:#1f1f1f;
+    opacity: 0.85;
+    display: flex;
+    flex-direction: column;
+    height: 300px; 
+    padding: .5rem 1rem;
+    a img{
+        height: 40px;
+    }
+}
+
+.burger-icons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 75px;
+}
+
+.burger-icon img {
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    align-self: flex-end;
+    margin-right: 25px;
+}
+
+.burger-links {
+    display: flex;
+    flex-direction: column;
+    height: 225px;
+    justify-content: space-between;
+    align-items: center;
+    a {
+        margin: 0 10px;
+        margin-bottom: 1px;
+        color:  #fff;
+    }
+    :hover {
+        margin-bottom: 0;
+        text-decoration: none;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+    }
 }
 
 .isActive {
