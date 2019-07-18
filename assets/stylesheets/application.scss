@@ -5,7 +5,12 @@
 @import './jobs.scss';
 
 body {
-  font-family: "DaimlerCS";
+  font-family: "DaimlerCS-Regular";
+}
+
+h1{
+  font-family: "DaimlerCS-Demi";
+  font-size: 80px;
 }
 
 .loader {
@@ -16,6 +21,16 @@ body {
 }
 
 @font-face{
-  font-family: "DaimlerCS";
+  font-family: "DaimlerCS-Regular";
   src: local("DaimlerCS"), url("../fonts/DaimlerCS-Regular.woff2") format("woff2");
+}
+
+@font-face{
+  font-family: "DaimlerCS-Demi";
+  src: local("DaimlerCS"), url("../fonts/DaimlerCS-Demi.woff2") format("woff2");
+}
+
+@font-face{
+  font-family: "DaimlerCS-Light";
+  src: local("DaimlerCS"), url("../fonts/DaimlerCS-Light.woff2") format("woff2");
 }

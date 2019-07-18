@@ -43,6 +43,12 @@
             text-align: right;
         }
 
+        &-list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         &-text{
             display: flex;
             flex-direction: column;

@@ -17,8 +17,6 @@ const SpeakerCard = ({ speaker, onClick }) => {
                     {
                         speaker.intern ? <img src="https://res.cloudinary.com/dciypbwrh/image/upload/v1563403251/MBio_logo_dark_ylgbfb.png" alt="mercedes-io logo" /> : null
                     }
-
-
                 </div>
                 <p>
                     {speaker.role}
