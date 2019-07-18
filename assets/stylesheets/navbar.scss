@@ -7,4 +7,34 @@
     background-color:#1f1f1f;
     display: flex;
     height: 75px;
+    img {
+        height: 60px;
+    }   
+    a img{
+        height: 40px;
+    }
+}
+
+.nav-link {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    a {
+        margin: 0 10px;
+        margin-bottom: 1px;
+        color:  #fff;
+    }
+    :hover {
+        margin-bottom: 0;
+        text-decoration: none;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+    } 
+}
+
+.isActive {
+    margin-bottom: 0;
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1px solid #fff;
 }

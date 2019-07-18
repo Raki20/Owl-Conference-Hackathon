@@ -25,12 +25,12 @@ class App extends Component {
     }
 
     componentDidMount () {
-        // setTimeout(() => {
-        //     this.setState({ ...apiStuff, isLoading: false });
-        // }, 2000);
         setTimeout(() => {
-            this.getConferenceInfo();
-        }, 2000);
+            this.setState({ ...apiStuff, isLoading: false });
+        }, 1000);
+        // setTimeout(() => {
+        //     this.getConferenceInfo();
+        // }, 1200);
     }
 
     getConferenceInfo = () => {
