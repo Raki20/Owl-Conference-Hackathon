@@ -28,6 +28,7 @@
     flex-direction: column;
     padding: 0 20px;
     color: #fff;
+    margin-top: 20px;
     &-talk {
         display: flex;
         justify-content: space-between;
@@ -35,13 +36,14 @@
         .talk-hours {
             width: 40vw;
             text-align: center;
-
+            font-size: 20px;
         }
         .talk-description {
             width: 60vw;
             text-align: end;
             padding-right: 10px;
             padding-bottom: 20px;
+            font-size: 20px;
             hr {
                 border: 0.5px solid #fff;
                 margin: auto 0;
@@ -51,6 +53,7 @@
             }
             &-room {
                 font-family: "DaimlerCS-Light";
+                font-size: 16px;
             }
         }
     }
@@ -98,5 +101,8 @@
     }
     .talk-hours {
         width: 20vw;
+    }
+    .talk-description {
+        width: 80vw;
     }
 }
