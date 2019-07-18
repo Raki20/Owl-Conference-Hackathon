@@ -1,9 +1,23 @@
 import React from 'react';
 
-const Jobs = () => {
+const Jobs = ({ jobs }) => {
     return (
-        <section id="jobs">
-            <h2>Join us!</h2>
+        <section id="jobs" className="jobs">
+            <div className="jobs-description">
+                <h2>{jobs.headline}</h2>
+                <p>{jobs.text}</p>
+                <a href={jobs.link} target="_blank" rel="noopener noreferrer">
+                    <button type="button">
+                        View job opportunities
+                    </button>
+                </a>
+            </div>
+            <div className="jobs-logo">
+                <img
+                    src="https://res.cloudinary.com/dciypbwrh/image/upload/v1563374772/gm_pltizn.png"
+                    alt="mercedes-io-logo"
+                />
+            </div>
         </section>
     );
 };

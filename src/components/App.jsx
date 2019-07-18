@@ -26,7 +26,11 @@ class App extends Component {
 
     componentDidMount () {
         // this.getConferenceInfo();
+<<<<<<< HEAD
         this.setState({...apiStuff, isLoading: false });
+=======
+        this.setState({ ...apiStuff, isLoading: false });
+>>>>>>> master
     }
 
     getConferenceInfo = () => {
@@ -39,7 +43,7 @@ class App extends Component {
 
     handleCloseModal = () => this.setState({ isModalOpen: false })
 
-    handleClickSpeaker = speaker => this.setState({ 
+    handleClickSpeaker = speaker => this.setState({
         isModalOpen: true,
         currentSpeaker: speaker
     })
@@ -66,7 +70,7 @@ class App extends Component {
                 <Speakers speakers={speakers} onClickCard={this.handleClickSpeaker} />
                 <Schedule timetable={timetable} />
                 <Info />
-                <Jobs />
+                <Jobs jobs={jobs} />
                 <SpeakerModal
                     isOpen={isModalOpen}
                     speaker={currentSpeaker}
