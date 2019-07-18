@@ -8,6 +8,13 @@ body {
   font-family: "DaimlerCS";
 }
 
+.loader {
+  background-color: #1f1f1f;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
 @font-face{
   font-family: "DaimlerCS";
   src: local("DaimlerCS"), url("../fonts/DaimlerCS-Regular.woff2") format("woff2");

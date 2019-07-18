@@ -32,6 +32,7 @@
     "react": "^16.8.6",
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.8.6",
+    "react-lottie": "^1.2.3",
     "react-modal": "^3.9.1",
     "react-router-dom": "^5.0.0"
   },
