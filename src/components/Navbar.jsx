@@ -20,7 +20,7 @@ class Navbar extends Component {
         const { active } = this.state;
         return (
             <div className="navbar">
-                <a href="https://www.mercedes-benz.io/" className="mercedes-io-logo">
+                <a href="https://www.mercedes-benz.io/" className="mercedes-io-logo" target="_blank" rel="noopener noreferrer">
                     <img
                         src="https://res.cloudinary.com/dciypbwrh/image/upload/v1563439344/gradienty-io_qrgf6g.svg"
                         alt="mercedes-io-logo"
