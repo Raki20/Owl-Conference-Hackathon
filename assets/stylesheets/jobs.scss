@@ -22,18 +22,58 @@
     }
 }
 
-@media(max-width: 780px) {
+@media(max-width: 700px) {
     .jobs {
         flex-direction: column;
         margin: 20px;
         .jobs-description {
+            display: flex;
+            flex-direction: column;
             width: 100%;
             h2 {
                 width: 100%;  
             }
+            p{
+                text-align: initial;
+                padding: 5px;
+                width: 90vw;
+            }
+            button{
+                width: 100%;
+            }
         }
         .jobs-logo {
-            width: 30%;
+            img{
+                display: none;
+            }
+        }
+    }
+}
+
+@media(max-width: 1000px) {
+    .jobs {
+        flex-direction: column;
+        margin: 20px;
+        .jobs-description {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            h2 {
+                width: 80%; 
+                align-self: center; 
+            }
+            p{
+                text-align: initial;
+                padding: 5px;
+                width: 80%;
+                align-self: center;
+            }
+        }
+        .jobs-logo {
+            img{
+                display: none;
+            }
         }
     }
 }
