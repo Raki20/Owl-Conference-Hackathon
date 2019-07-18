@@ -3,6 +3,9 @@
     margin: auto 10vw;
     .jobs-description {
         width: 50vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         h2 {
             font-weight: 700;
         }
