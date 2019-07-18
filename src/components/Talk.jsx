@@ -9,7 +9,7 @@ const Talk = ({ talk }) => {
             <div className="talk-description">
                 <p>{talk.topic}</p>
                 <hr />
-                <p>{talk.venue}</p>
+                <p className="talk-description-room">{talk.venue}</p>
             </div>
         </div>
     );
