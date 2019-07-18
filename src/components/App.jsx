@@ -7,7 +7,7 @@ import Info from "./Info";
 import Jobs from "./Jobs";
 import SpeakerModal from "./SpeakerModal";
 
-// import apiStuff from '../../mercedesapi.json';
+import apiStuff from '../../mercedesapi.json';
 
 class App extends Component {
     constructor(props) {
@@ -25,8 +25,8 @@ class App extends Component {
     }
 
     componentDidMount () {
-        this.getConferenceInfo();
-        // this.setState(apiStuff);
+        // this.getConferenceInfo();
+        this.setState({...apiStuff, isLoading: false });
     }
 
     getConferenceInfo = () => {
