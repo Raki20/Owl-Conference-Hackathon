@@ -8,6 +8,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 800px;
+    margin: auto;
     }
 }
 
@@ -15,9 +17,11 @@
     &-card {
         display: flex;
         flex-direction: column;
-        width: 25vw;
-        margin: 15px;
+        width: 50%;
+        margin: 0;
         padding: 5px;
+        flex-grow: 1;
+        justify-content: space-between;
         img {
             width: 100%;
             margin-bottom: 10px;
@@ -25,13 +29,15 @@
         &-text{
             display: flex;
             flex-direction: column;
-            img{
-                width: 143px;
-                background-color: #f1f1f1;
-            }
+            justify-content: end;
+            justify-self: end;
             &-align{
                 display:flex;
                 justify-content: space-between;
+                img{
+                    width: 143px;
+                    background-color: #f1f1f1;
+                }
             }
         }
     }
@@ -42,13 +48,13 @@
         p {
             text-align: right;
         }
-
+        
         &-list{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
         }
-
+        
         &-text{
             display: flex;
             flex-direction: column;
@@ -61,10 +67,8 @@
             img{
                 width:50vw;
             }
-
         }
     }
-    
 }
 
 
@@ -87,4 +91,9 @@
     h2 {
         text-align: center;
     }
+}
+
+@media (max-width: 1200px){
+
+
 }
