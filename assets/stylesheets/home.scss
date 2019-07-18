@@ -3,25 +3,32 @@
     flex-direction: column;
     padding-top: 75px;
     height: 100vh;
-    background-image: linear-gradient(100deg, #263a57a6 10%, #e84c4c6e 100%), url("https://images.unsplash.com/photo-1500472880779-eb5d1e15fe65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+    background-image: linear-gradient(rgba(1, 1, 1, 0.7), rgba(1, 1, 1, 0.7)), url("https://res.cloudinary.com/dciypbwrh/image/upload/v1563439334/particles_zpulba.png");
+    background-position: top, bottom;
+    background-color: #1f1f1f;
     background-size: cover;
     background-repeat: no-repeat;
     align-items: center;
     justify-content: space-evenly;
 
+    img {
+        max-width: 480px;
+    }
+
     h1 {
         color: #ffffff;
-        font-size: 56px;
+        font-size: 80px;
         text-align: center;
         font-weight: 700;
     }
 
     h2 {
         background-color: #007bffba;
-        width: 80vw;
+        width: 60vw;
         text-align: center;
         font-size: 24px;
         padding: 5px;
+        font-family: "DaimlerCS-Demi"
 
     }
     h3 {
@@ -51,6 +58,12 @@
 }
 
 @media (max-width: 780px) {
+
+    .banner{
+        img{
+            width: 55vw;
+        }
+    }
     .details-banner {
         flex-direction: column;
         padding: 0;
