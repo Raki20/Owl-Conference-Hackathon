@@ -52,7 +52,7 @@ class Navbar extends Component {
                     </a>
                     <div className="burger-icon" role="presentation" onClick={this.asMarkAsOpen}>
                         <img
-                            src="../assets/icons/bars.png"
+                            src="https://res.cloudinary.com/dc4zctxhv/image/upload/v1563532840/bars_li9art.png"
                             alt="burger-icon"
                         />
                     </div>
