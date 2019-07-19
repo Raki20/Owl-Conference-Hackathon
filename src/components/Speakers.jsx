@@ -4,7 +4,7 @@ import SpeakerCard from "./SpeakerCard";
 const Speakers = ({ speakers, onClickCard }) => {
     return (
         <section id="speakers" className="speakers-section">
-            <h2>Meet our amazing speakers</h2>
+            <h2>Speakers</h2>
             <div className="speakers-list">
                 {
                     speakers.map(speaker => (

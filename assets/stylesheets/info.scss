@@ -5,6 +5,7 @@
 .info-details {
     display: flex;
     align-items: center;
+    background-color: #00adef;
 }
 
 .map {
@@ -15,7 +16,8 @@
 .info-down {
     width: 35vw;
     flex-grow: 1;
-    padding: 40px;
+    padding: 60px;
+    color: #fff;
 }
 
 @media(max-width: 780px) {

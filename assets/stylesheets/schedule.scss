@@ -62,11 +62,15 @@
 .day-title {
     background-color: #00ADEF;
     margin-top: 20px;
-    width: 150px;
+    width: 180px;
     padding: 10px;
+    cursor: pointer;
     h3 {
         color: #fff;
         align-self: flex-end;
+        padding: 5px;
+        margin: 0;
+        text-align: right;
     }
     &-selected {
         background-color: #00ADEF;
@@ -74,9 +78,13 @@
         width: 100%;
         padding: 10px;
         text-align: end;
+        cursor: pointer;
         h3 {
             color: #fff;
             align-self: flex-end;
+            padding: 5px;
+            margin: 0;
+            text-align: right;
         }
     }
 }
