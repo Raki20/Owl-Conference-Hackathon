@@ -5,8 +5,10 @@ Modal.setAppElement('#root');
 
 const modalStyle = {
     content: {
-        backgroundColor: 'transparent',
         display: 'flex',
+        padding: 0,
+        border: 'none',
+        backgroundColor: 'black',
     }
 };
 
@@ -17,10 +19,12 @@ const SpeakerModal = ({ isOpen, onClose, speaker }) => {
             onRequestClose={onClose}
             contentLabel="Speaker Modal"
             style={modalStyle}
+            overlayClassName="overlay"
         >
             <div className="speaker-modal">
                 <div className="modal-content">
                     <div className="modal-content-title">
+                        <div className="modal-content-close" role="presentation" onClick={onClose}>x</div>
                         <h2>{speaker.name}</h2>
                         <p style={{ fontFamily: "DaimlerCS-Light"}}>{speaker.role}</p>
                         <p>Talk: <strong>{speaker.topic}</strong></p>
