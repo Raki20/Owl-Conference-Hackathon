@@ -17,6 +17,10 @@
             border: 1px solid #00ADEF;
             border-radius: 12px;
             padding: 10px;
+            &:hover {
+                border: 1px solid #116e88;
+                background-color:  #116e88;
+            }
         }
     }
     .jobs-logo {
