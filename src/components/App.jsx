@@ -27,12 +27,12 @@ class App extends Component {
     }
 
     componentDidMount () {
-        setTimeout(() => {
-            this.setState({ ...apiStuff, isLoading: false });
-        }, 1000);
         // setTimeout(() => {
-        //     this.getConferenceInfo();
-        // }, 1200);
+        //     this.setState({ ...apiStuff, isLoading: false });
+        // }, 1000);
+        setTimeout(() => {
+            this.getConferenceInfo();
+        }, 800);
         this.reportWindowSize();
         window.addEventListener('resize', this.reportWindowSize);
     }
@@ -86,7 +86,7 @@ class App extends Component {
                 <Home about={about} />
                 <Speakers speakers={speakers} onClickCard={this.handleClickSpeaker} />
                 <Schedule timetable={timetable} />
-                <Info />
+                <Info location={location} />
                 <Jobs jobs={jobs} />
                 <Footer />
                 <SpeakerModal

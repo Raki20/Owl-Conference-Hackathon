@@ -1,0 +1,48 @@
+.info {
+    height: 100vh;
+    padding: 20px;
+}
+.info-details {
+    display: flex;
+    align-items: center;
+}
+
+.map {
+    width: 65vw;
+    height: 500px;
+}
+
+.info-down {
+    width: 35vw;
+    flex-grow: 1;
+    padding: 40px;
+}
+
+@media(max-width: 780px) {
+    .info-details {
+        flex-direction: column;
+    }
+    .map {
+        width: 100%;
+        height: 400px;
+    }
+    .info-down {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+    h2 {
+        font-size: 2em;
+        font-family: "DaimlerCS-Demi";
+    }
+    h3 {
+        font-size: 1.5em;
+        font-family: "DaimlerCS-Demi";
+    }
+    p {
+        font-size: 16px;
+        font-family: "DaimlerCS-Regular";
+        margin: 5px;
+    }
+    
+}
