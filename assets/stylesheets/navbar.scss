@@ -22,6 +22,8 @@
         margin: 0 10px;
         margin-bottom: 1px;
         color:  #fff;
+        font-size: 20px;
+        font-family: "DaimlerCS-Demi";
     }
     :hover {
         margin-bottom: 0;
@@ -63,6 +65,13 @@
     margin-right: 25px;
 }
 
+.burger {
+    .burger-icons {
+        height: 75px;
+        padding: .6rem 0rem;
+    }
+}
+
 .burger-links {
     display: flex;
     flex-direction: column;
@@ -73,6 +82,8 @@
         margin: 0 10px;
         margin-bottom: 1px;
         color:  #fff;
+        font-family: "DaimlerCS-Demi";
+        font-size: 18px;
     }
     :hover {
         margin-bottom: 0;
