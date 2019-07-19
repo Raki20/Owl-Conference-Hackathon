@@ -10,24 +10,26 @@ const SpeakerModal = ({ isOpen, onClose, speaker }) => {
             onRequestClose={onClose}
             contentLabel="Speaker Modal"
         >
-            <div className="speaker-modal-text">
-                <h2>{speaker.name}</h2>
-                <p>{speaker.role}</p>
-                <p>Talk: <strong>{speaker.topic}</strong></p>
-                {
-                    speaker.intern ? <img src="https://res.cloudinary.com/dciypbwrh/image/upload/v1563403251/MBio_logo_dark_ylgbfb.png" alt="mercedes-io logo" /> : null
-                }
-            </div>
 
-            <div className="speaker-modal-content">
-                <div className="speaker-modal-about">
-                    <p>{speaker.about}</p>
+            <div className="speaker-modal">
+                <div className="modal-content">
+                    <div className="modal-content-title">
+                        <h2>{speaker.name}</h2>
+                        <p style={{ fontFamily: "DaimlerCS-Light"}}>{speaker.role}</p>
+                        <p>Talk: <strong>{speaker.topic}</strong></p>
+                        {
+                            speaker.intern ? <img src="https://res.cloudinary.com/dciypbwrh/image/upload/v1563403251/MBio_logo_dark_ylgbfb.png" alt="mercedes-io logo" /> : null
+                        }
+                    </div>
+                    <div className="modal-content-about">
+                        <p>{speaker.about}</p>
+                    </div>
                 </div>
-                <div className="speaker-modal-picture">
+
+                <div className="modal-image">
                     <img src={speaker.image} alt={speaker.name} />
                 </div>
             </div>
-
         </Modal>
     );
 };
