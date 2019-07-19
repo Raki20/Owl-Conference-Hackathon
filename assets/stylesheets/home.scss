@@ -36,7 +36,7 @@
     }
     &-bottom {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         text-align: center;
         width: 100%;
         font-size: 20px;
@@ -63,6 +63,7 @@
         }
         &-bottom{
             font-size: 15px;
+            padding: 10px;
             // flex-direction: column;
         }
     }

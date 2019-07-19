@@ -4,7 +4,8 @@ const Jobs = ({ jobs }) => {
     return (
         <section id="jobs" className="jobs">
             <div className="jobs-description">
-                <h2>{jobs.headline}</h2>
+                <h2>Opportunities</h2>
+                <h3>{jobs.headline}</h3>
                 <p>{jobs.text}</p>
                 <a href={jobs.link} target="_blank" rel="noopener noreferrer">
                     <button type="button">

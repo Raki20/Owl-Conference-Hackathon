@@ -10,6 +10,7 @@
         h2 {
             font-weight: 700;
         }
+
         button {
             background-color:  #00ADEF;
             color: #ffffff;
@@ -19,9 +20,12 @@
         }
     }
     .jobs-logo {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end; 
         width: 50vw;
         img {
-            width: 100%;
+            width: 300px;
         }
     }
 }
@@ -30,6 +34,9 @@
     .jobs {
         flex-direction: column;
         margin: 20px;
+        height: auto;
+        padding: 30px 0;
+
         .jobs-description {
             display: flex;
             flex-direction: column;
@@ -58,6 +65,9 @@
     .jobs {
         flex-direction: column;
         margin: 20px;
+        height: auto;
+        padding: 30px 0;
+
         .jobs-description {
             display: flex;
             flex-direction: column;
@@ -66,6 +76,9 @@
             h2 {
                 width: 80%; 
                 align-self: center; 
+            }
+            h3 {
+                padding: 0 70px;
             }
             p{
                 text-align: initial;
