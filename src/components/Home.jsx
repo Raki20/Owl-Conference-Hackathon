@@ -8,14 +8,14 @@ const Home = ({ about }) => {
             </div>
             <div className="details-banner">
                 <div className="details-banner-top">
-                    <p>Owl Conf 2019</p>
+                    <h2>Owl Conf 2019</h2>
                     <p>{about.text.replace("Bring it owl. ", "")}</p>
                 </div>
                 <div className="details-banner-bottom">
                     <p>First Edition</p>
-                    <p><span role="img" aria-label="circle">⚫</span></p>
+                    <p><span role="img" aria-label="circle" style={{ fontSize: '10px' }}>⚫</span></p>
                     <p>Stuttgart</p>
-                    <p><span role="img" aria-label="circle">⚫</span></p>
+                    <p><span role="img" aria-label="circle" style={{ fontSize: '10px' }}>⚫</span></p>
                     <p>12 & 13 October</p>
                 </div>
             </div>

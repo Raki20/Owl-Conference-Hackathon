@@ -27,12 +27,20 @@
     &-top {
         width: 50vw;
         text-align: center;
+        font-size: 20px;
+        margin-top: 10vh;
+        h2{
+            font-family: "DaimlerCS-Demi";
+            font-size: 3em;
+        }
     }
     &-bottom {
         display: flex;
         justify-content: space-evenly;
         text-align: center;
         width: 100%;
+        font-size: 20px;
+        font-family: "DaimlerCS-Demi";
     }
 }
 
@@ -45,5 +53,17 @@
     .details-banner {
         flex-direction: column;
         justify-content: space-around;
+        &-top{
+            flex-direction: column;
+            margin-top:2vh;
+            width: 80vw;
+            h2{
+                font-size: 2em;
+            }
+        }
+        &-bottom{
+            font-size: 15px;
+            // flex-direction: column;
+        }
     }
 }

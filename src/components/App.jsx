@@ -8,7 +8,7 @@ import Jobs from "./Jobs";
 import SpeakerModal from "./SpeakerModal";
 import Loading from "./Loading";
 import Footer from "./Footer";
-import apiStuff from '../../mercedesapi.json';
+// import apiStuff from '../../mercedesapi.json';
 
 
 class App extends Component {
@@ -27,12 +27,12 @@ class App extends Component {
     }
 
     componentDidMount () {
-        setTimeout(() => {
-            this.setState({ ...apiStuff, isLoading: false });
-        }, 1000);
         // setTimeout(() => {
-        //     this.getConferenceInfo();
-        // }, 1200);
+        //     this.setState({ ...apiStuff, isLoading: false });
+        // }, 1000);
+        setTimeout(() => {
+            this.getConferenceInfo();
+        }, 1200);
         this.reportWindowSize();
         window.addEventListener('resize', this.reportWindowSize);
     }
