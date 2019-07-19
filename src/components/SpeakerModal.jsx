@@ -3,14 +3,21 @@ import Modal from 'react-modal';
 
 Modal.setAppElement('#root');
 
+const modalStyle = {
+    content: {
+        backgroundColor: 'transparent',
+        display: 'flex',
+    }
+};
+
 const SpeakerModal = ({ isOpen, onClose, speaker }) => {
     return (
         <Modal
             isOpen={isOpen}
             onRequestClose={onClose}
             contentLabel="Speaker Modal"
+            style={modalStyle}
         >
-
             <div className="speaker-modal">
                 <div className="modal-content">
                     <div className="modal-content-title">

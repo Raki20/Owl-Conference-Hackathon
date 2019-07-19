@@ -27,12 +27,20 @@
     &-top {
         width: 50vw;
         text-align: center;
+        h2{
+            font-family: "DaimlerCS-Demi";
+            font-size: 3em;
+        }
+        p{
+            font-size: 20px;
+        }
     }
     &-bottom {
         display: flex;
         justify-content: space-evenly;
         text-align: center;
         width: 100%;
+
     }
 }
 

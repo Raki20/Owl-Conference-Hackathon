@@ -8,7 +8,7 @@ const Home = ({ about }) => {
             </div>
             <div className="details-banner">
                 <div className="details-banner-top">
-                    <p>Owl Conf 2019</p>
+                    <h2>Owl Conf 2019</h2>
                     <p>{about.text.replace("Bring it owl. ", "")}</p>
                 </div>
                 <div className="details-banner-bottom">
